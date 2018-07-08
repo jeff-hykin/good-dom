@@ -1,0 +1,25 @@
+{
+  "name": "good-dom",
+  "version": "0.0.1",
+  "description": "A lightweight dom manipulation tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeff-hykin/good-dom.git"
+  },
+  "keywords": [
+    "javascript",
+    "toolkit",
+    "library",
+    "dom"
+  ],
+  "author": "Jeff Hykin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeff-hykin/good-dom/issues"
+  },
+  "homepage": "https://github.com/jeff-hykin/good-dom#readme"
+}
