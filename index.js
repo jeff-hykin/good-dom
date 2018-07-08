@@ -1,4 +1,4 @@
-var copyFunc = require("good-js")
+var {copyFunc} = require("good-js")
 module.exports = ()=>
     {
         // New('div') >>> document.createElement('div')
