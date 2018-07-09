@@ -63,4 +63,22 @@ module.exports = ()=>
                         flexDirection: "column"
                     }
                 }
+            window.centerChildrenHorizontally = function(aNode)
+                {
+                    aNode.style = {
+                        display: "flex",
+                        alignContent: "center",
+                        alignItems: "center",
+                        flexDirection: "column",
+                    }
+                }
+            window.centerChildrenVertically = function(aNode)
+                {
+                    aNode.style = {
+                        display: "flex",
+                        justifyContent: "center",
+                        justifyItems: "center",
+                        flexDirection: "column",
+                    }
+                }
     }
