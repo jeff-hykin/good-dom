@@ -52,7 +52,7 @@ window.HTMLCollection.prototype[Symbol.iterator] = function* () {
     }
 }
 function SimpleElement(properties, ...children) {
-    let elem = Object.assign(document.createElement(this.constructor.name.toLowerCase()), properties)
+    let elem = Object.assign(document.createElement(this.constructor.name.toLowerCase().replace("_","-")), properties)
     elem.add(...children)
     return elem
 }

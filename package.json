@@ -1,27 +1,26 @@
 {
-  "name": "good-dom",
-  "version": "2.0.3",
-  "description": "A lightweight dom manipulation tool",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeff-hykin/good-dom.git"
-  },
-  "keywords": [
-    "javascript",
-    "toolkit",
-    "library",
-    "dom"
-  ],
-  "author": "Jeff Hykin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jeff-hykin/good-dom/issues"
-  },
-  "homepage": "https://github.com/jeff-hykin/good-dom#readme",
-  "dependencies": {
-  }
+    "name": "good-dom",
+    "version": "2.1.0",
+    "description": "A lightweight dom manipulation tool",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jeff-hykin/good-dom.git"
+    },
+    "keywords": [
+        "javascript",
+        "toolkit",
+        "library",
+        "dom"
+    ],
+    "author": "Jeff Hykin",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jeff-hykin/good-dom/issues"
+    },
+    "homepage": "https://github.com/jeff-hykin/good-dom#readme",
+    "dependencies": {}
 }
