@@ -1,4 +1,3 @@
-
 // expand the HTML element ability
 Object.defineProperties(window.HTMLElement.prototype, {
     // allow setting of all styles directly
@@ -35,15 +34,17 @@ window.HTMLElement.prototype.add = function (...inputs) {
         if (typeof each == 'string') {
             this.appendChild(new Text(each))
         } else {
+            console.log(`each is:`,each)
             this.appendChild(each)
         }
     }
+    return this
 }
 // addClass()
 window.HTMLElement.prototype.addClass = function (...inputs) {
     return this.classList.add(...inputs)
 }
-// for (let eachChild of elem)
+// for (let eachChild of elemCollection)
 window.HTMLCollection.prototype[Symbol.iterator] = function* () {
     let index = 0
     let len = this.length
@@ -51,10 +52,17 @@ window.HTMLCollection.prototype[Symbol.iterator] = function* () {
         yield this[index++]
     }
 }
+// for (let eachChild of elem)
+window.HTMLElement.prototype[Symbol.iterator] = function* () {
+    let index = 0
+    let len = this.childNodes.length
+    while (index < len) {
+        yield this.childNodes[index++]
+    }
+}
+
 function SimpleElement(properties, ...children) {
-    let elem = Object.assign(document.createElement(this.constructor.name.toLowerCase().replace("_","-")), properties)
-    elem.add(...children)
-    return elem
+    return Object.assign(document.createElement(this.constructor.name.toLowerCase()), properties).add(...children)
 }
 let domElements = {
     // constructors for all of the Dom
@@ -180,7 +188,7 @@ let domElements = {
     VAR        : function (...args) {return SimpleElement.apply(this, args)},
     VIDEO      : function (...args) {return SimpleElement.apply(this, args)},
     WBR        : function (...args) {return SimpleElement.apply(this, args)},
-    makeCustom : (constructor)=>window.customElements.define(constructor.name.toLowerCase()+"-", constructor),
+    makeCustom : (constructor, extend) => window.customElements.define(constructor.name.toLowerCase()+"-", constructor),
 }
 module.exports = domElements
-module.exports.global = ()=>Object.assign(window,domElements)
+module.exports.global = ()=>Object.assign(window, domElements)

@@ -1,0 +1,3 @@
+- create a hyper-minified version
+- create 2-way data binding object, with self-adding/removing listener for changes
+- create some powerful custom components
