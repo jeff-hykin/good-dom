@@ -32,7 +32,11 @@ Object.defineProperties(window.HTMLElement.prototype, {
 // add()
 window.HTMLElement.prototype.add = function (...inputs) {
     for (let each of inputs) {
-        this.appendChild(each)
+        if (typeof each == 'string') {
+            this.appendChild(new Text(each))
+        } else {
+            this.appendChild(each)
+        }
     }
 }
 // addClass()
@@ -49,9 +53,7 @@ window.HTMLCollection.prototype[Symbol.iterator] = function* () {
 }
 function SimpleElement(properties, ...children) {
     let elem = Object.assign(document.createElement(this.constructor.name.toLowerCase()), properties)
-    for (let each of children) {
-        elem.appendChild(each)
-    }
+    elem.add(...children)
     return elem
 }
 let domElements = {
