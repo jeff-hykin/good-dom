@@ -34,7 +34,6 @@ window.HTMLElement.prototype.add = function (...inputs) {
         if (typeof each == 'string') {
             this.appendChild(new Text(each))
         } else {
-            console.log(`each is:`,each)
             this.appendChild(each)
         }
     }
@@ -64,6 +63,11 @@ window.HTMLElement.prototype[Symbol.iterator] = function* () {
 function SimpleElement(properties, ...children) {
     return Object.assign(document.createElement(this.constructor.name.toLowerCase()), properties).add(...children)
 }
+
+let React = {
+    createElement: (name, properties, ...children) => Object.assign(document.createElement(name), properties).add(...children)
+}
+
 let domElements = {
     // constructors for all of the Dom
     A          : function (...args) {return SimpleElement.apply(this, args)},
@@ -191,13 +195,18 @@ let domElements = {
     makeCustom : (constructor, extend) => window.customElements.define(constructor.name.toLowerCase()+"-", constructor),
 }
 
+function makeGlobal() {
+    Object.assign(window, domElements)
+    window.React = React
+}
+
 // if there is no exporting system
 if(typeof exports == "undefined"){
     // put everything in the global scope
-    Object.assign(window, domElements)
+    makeGlobal()
 // if there is an export system
 } else {
     // give the user the choice of local or global
     module.exports = domElements
-    module.exports.global = ()=>Object.assign(window, domElements)
+    module.exports.global = makeGlobal
 }
