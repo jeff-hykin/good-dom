@@ -1,9 +1,15 @@
 // expand the HTML element ability
 Object.defineProperties(window.HTMLElement.prototype, {
-    // allow setting of all styles directly
+    // setting styles through a string
+    css : { set: Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'style').set },
+    // allow setting of styles through string or object
     style: {
         set: function (styles) {
-            Object.assign(this.style, styles);
+            if (typeof styles == "string") {
+                this.css = styles
+            } else {
+                Object.assign(this.style, styles)
+            }
         }
     },
     // allow setting of children directly
