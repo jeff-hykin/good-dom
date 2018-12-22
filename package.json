@@ -1,6 +1,6 @@
 {
     "name": "good-dom",
-    "version": "3.1.3",
+    "version": "3.1.4",
     "description": "A lightweight dom manipulation tool",
     "main": "index.js",
     "scripts": {
@@ -22,5 +22,7 @@
         "url": "https://github.com/jeff-hykin/good-dom/issues"
     },
     "homepage": "https://github.com/jeff-hykin/good-dom#readme",
-    "dependencies": {}
+    "dependencies": {
+        "good-jsx" : "^1.0.5"
+    }
 }
