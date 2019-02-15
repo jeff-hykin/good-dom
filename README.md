@@ -26,7 +26,7 @@ Without good-dom:
 ```
 
 
-Equivalent output using good-dom (without JSX):
+Equivalent output using good-dom:
 ```html
 <!-- good-dom without JSX -->
 <!-- (copy and paste this into a .html file an open it and it will work) -->
@@ -41,23 +41,6 @@ Equivalent output using good-dom (without JSX):
             oninput: (eventObject) => blahDiv.innerText = eventObject.target.value
         })
     )
-</script>
-</body>
-```
-
-Equivlent output using good-dom with JSX:
-```html
-<!-- good-dom with jsx -->
-<!-- (copy and pasting this code won't work directly) -->
-<!-- (you'll need a jsx transpiler (e.g. babel) first) -->
-<body>
-<script type="text/javascript">
-    require('good-dom').global()
-    document.body = <body style={{ width: "100vw", display: "flex", flexDirection: "column", alignItems: "center"}}>
-        Hello There
-        {blahDiv= <div>Im an inner box</div>}
-        {blahInput= <input placeholder="type something" oninput={eventObject=>blahDiv=eventObject.target.value} />}
-    </body>
 </script>
 </body>
 ```
