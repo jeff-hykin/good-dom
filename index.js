@@ -1,3 +1,4 @@
+const elementSymbol = Symbol.for("element")
 // expand the HTML element ability
 Object.defineProperties(window.HTMLElement.prototype, {
     // setting styles through a string
@@ -46,6 +47,8 @@ window.HTMLElement.prototype.add = window.SVGElement.prototype.add = window.HTML
             this.add(each())
         } else if (each instanceof Array) {
             this.add(...each)
+        } else if (each instanceof Object && each[elementSymbol]) {
+            this.add(each[elementSymbol])
         } else {
             this.appendChild(each)
         }
