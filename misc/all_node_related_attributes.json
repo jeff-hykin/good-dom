@@ -54,23 +54,15 @@ rows
 rowSpan
 colSpan
 sectionRowIndex
-select
 selected
 selectedIndex
 selectedOptions
-selectionDirection
-selectionEnd
-selectionStart
 shadowRoot
 sheet
-show
-showModal
 span
-target
 tBodies
 tFoot
 tHead
-title
 
 documentElement
 body
@@ -96,5 +88,4 @@ getElementById
 getElementsByName
 getSelection
 importNode
-open
 pictureInPictureElement
