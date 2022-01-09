@@ -1,91 +1,93 @@
-cloneNode
+[
+    "cloneNode",
 
-childNodes
-firstChild
-lastChild
-nextSibling
-ownerDocument
-parentNode
-parentElement
-previousSibling
-appendChild
-compareDocumentPosition
-contains
-getRootNode
-hasChildNodes
-insertBefore
-isEqualNode
-isSameNode
-removeChild
-replaceChild
+    "childNodes",
+    "firstChild",
+    "lastChild",
+    "nextSibling",
+    "ownerDocument",
+    "parentNode",
+    "parentElement",
+    "previousSibling",
+    "appendChild",
+    "compareDocumentPosition",
+    "contains",
+    "getRootNode",
+    "hasChildNodes",
+    "insertBefore",
+    "isEqualNode",
+    "isSameNode",
+    "removeChild",
+    "replaceChild",
 
-add
-after
-append
-before
-children
-closest
-cols
-elements
-getElementsByClassName
-getElementsByTagName
-getElementsByTagNameNS
-getSVGDocument
-headers
-htmlFor
-insertAdjacentElement
-insertAdjacentHTML
-insertAdjacentText
-insertCell
-insertRow
-lastElementChild
-matches
-nextElementSibling
-prepend
-previousElementSibling
-querySelector
-querySelectorAll
-remove
-replaceChildren
-replaceWith
-reversed
-rowIndex
-rows
-rowSpan
-colSpan
-sectionRowIndex
-selected
-selectedIndex
-selectedOptions
-shadowRoot
-sheet
-span
-tBodies
-tFoot
-tHead
+    "add",
+    "after",
+    "append",
+    "before",
+    "children",
+    "closest",
+    "cols",
+    "elements",
+    "getElementsByClassName",
+    "getElementsByTagName",
+    "getElementsByTagNameNS",
+    "getSVGDocument",
+    "headers",
+    "htmlFor",
+    "insertAdjacentElement",
+    "insertAdjacentHTML",
+    "insertAdjacentText",
+    "insertCell",
+    "insertRow",
+    "lastElementChild",
+    "matches",
+    "nextElementSibling",
+    "prepend",
+    "previousElementSibling",
+    "querySelector",
+    "querySelectorAll",
+    "remove",
+    "replaceChildren",
+    "replaceWith",
+    "reversed",
+    "rowIndex",
+    "rows",
+    "rowSpan",
+    "colSpan",
+    "sectionRowIndex",
+    "selected",
+    "selectedIndex",
+    "selectedOptions",
+    "shadowRoot",
+    "sheet",
+    "span",
+    "tBodies",
+    "tFoot",
+    "tHead",
 
-documentElement
-body
-head
-scrollingElement
-webkitCurrentFullScreenElement
-webkitFullscreenEnabled
-webkitFullscreenElement
-rootElement
-firstElementChild
-childElementCount
-activeElement
-pointerLockElement
-fullscreenElement
-adoptNode
-createElement
-createElementNS
-createNodeIterator
-createTextNode
-elementFromPoint
-elementsFromPoint
-getElementById
-getElementsByName
-getSelection
-importNode
-pictureInPictureElement
+    "documentElement",
+    "body",
+    "head",
+    "scrollingElement",
+    "webkitCurrentFullScreenElement",
+    "webkitFullscreenEnabled",
+    "webkitFullscreenElement",
+    "rootElement",
+    "firstElementChild",
+    "childElementCount",
+    "activeElement",
+    "pointerLockElement",
+    "fullscreenElement",
+    "adoptNode",
+    "createElement",
+    "createElementNS",
+    "createNodeIterator",
+    "createTextNode",
+    "elementFromPoint",
+    "elementsFromPoint",
+    "getElementById",
+    "getElementsByName",
+    "getSelection",
+    "importNode",
+    "pictureInPictureElement",
+]
