@@ -1,4 +1,5 @@
 vals = [... new Set([
+    Object.getOwnPropertyNames(Node.prototype),
     Object.getOwnPropertyNames(Element.prototype),
     Object.getOwnPropertyNames(HTMLElement.prototype),
     Object.getOwnPropertyNames(Document.prototype),
